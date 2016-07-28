@@ -12,7 +12,8 @@ Malice Plugin Alpine Docker Base Image
 ### Documentation
 
 Additions  
- - hashicorp/docker-base:0.0.4  
+ - tianon/gosu:1.9  
+ - krallin/tini  
  - add malice user  
  - add /malware directory
 

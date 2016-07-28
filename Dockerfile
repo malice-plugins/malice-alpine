@@ -2,9 +2,6 @@ FROM gliderlabs/alpine:3.4
 
 MAINTAINER blacktop, https://github.com/blacktop
 
-RUN addgroup malice && \
-    adduser -S -G malice malice
-
 ENV GOSU_VERSION 1.9
 
 RUN apk-install tini
@@ -20,6 +17,9 @@ RUN apk-install -t .gosu-deps dpkg gnupg openssl \
   && rm -r "$GNUPGHOME" /usr/local/bin/gosu.asc \
   && chmod +x /usr/local/bin/gosu \
   && gosu nobody true \
+  && echo "Add malice user and malware folder..." \
+  && addgroup malice \
+  && adduser -S -G malice malice \
   && mkdir /malware \
   && chown -R malice:malice /malware \
   && rm -rf /tmp/* /root/.gnupg \
