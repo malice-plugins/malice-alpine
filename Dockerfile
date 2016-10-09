@@ -2,7 +2,7 @@ FROM gliderlabs/alpine:3.4
 
 MAINTAINER blacktop, https://github.com/blacktop
 
-ENV GOSU_VERSION 1.9
+ENV GOSU_VERSION 1.10
 
 RUN apk-install tini
 RUN apk-install -t .gosu-deps dpkg gnupg openssl \
