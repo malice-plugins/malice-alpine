@@ -14,7 +14,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-[v0.1.0] - 2016-07-24
+[v0.1.0] - 2016-12-21
 ---------------------
 
 ### Fixed
@@ -24,3 +24,5 @@ All notable changes to this project will be documented in this file.
 ### Removed
 
 ### Changed
+
+-	swap gosu for su-exec
