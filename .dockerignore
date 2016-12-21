@@ -2,6 +2,8 @@
 .git*
 
 README.md
+README.md.bu
 CHANGELOG.md
 LICENSE
+VERSION
 Makefile
