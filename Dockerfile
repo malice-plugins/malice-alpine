@@ -1,8 +1,8 @@
-FROM gliderlabs/alpine:3.4
+FROM alpine:3.5
 
 MAINTAINER blacktop, https://github.com/blacktop
 
-RUN apk-install tini su-exec
+RUN apk add --no-cache tini su-exec
 RUN set -x \
   && echo "Add malice user and malware folder..." \
   && addgroup malice \

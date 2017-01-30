@@ -14,7 +14,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-[v0.1.0] - 2016-12-21
+[v0.1.0] - 2017-01-29
 ---------------------
 
 ### Fixed
@@ -25,4 +25,5 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
+- upgraded to alpine 3.5
 -	swap gosu for su-exec

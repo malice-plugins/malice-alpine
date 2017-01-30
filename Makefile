@@ -1,21 +1,19 @@
+REPO=malice
 NAME=alpine
 VERSION=$(shell cat VERSION)
 
+all: build size test
+
 build:
-	docker build -t malice/$(NAME):$(VERSION) .
-	sed -i.bu 's/docker image-.*-blue/docker image-$(shell docker images --format "{{.Size}}" malice/$(NAME):$(VERSION))-blue/g' README.md
+	docker build -t $(REPO)/$(NAME):$(VERSION) .
 
-release:
-	rm -rf release && mkdir release
-	go get github.com/progrium/gh-release/...
-	cp build/* release
-	gh-release create maliceio/$(NAME) $(VERSION) \
-		$(shell git rev-parse --abbrev-ref HEAD) $(VERSION)
-	# glu hubtag maliceio/malice-$(NAME) $(VERSION)
+size:
+	sed -i.bu 's/docker image-.*-blue/docker image-$(shell docker images --format "{{.Size}}" $(REPO)/$(NAME):$(VERSION))-blue/' README.md
 
-circleci:
-	rm -f ~/.gitconfig
-	go get -u github.com/gliderlabs/glu
-	glu circleci
+tags:
+	docker images --format "table {{.Repository}}\t{{.Tag}}\t{{.Size}}" $(REPO)/$(NAME)
 
-.PHONY: build release
+test:
+	docker run --rm $(REPO)/$(NAME):$(VERSION) sh -c "echo 'hello world!'"
+
+.PHONY: build size tags test
