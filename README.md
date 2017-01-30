@@ -7,7 +7,7 @@ Malice Plugin Alpine Docker Base Image
 
 ### Dependencies
 
--	[gliderlabs/alpine:3.4](https://index.docker.io/_/gliderlabs/alpine/)
+-	[alpine:3.5](https://index.docker.io/_/alpine/)
 
 ### Documentation
 
@@ -19,7 +19,7 @@ Additions
 
 ### Issues
 
-Find a bug? Want more features? Find something missing in the documentation? Let me know! Please don't hesitate to [file an issue](https://github.com/maliceio/go-docker-base/issues/new) and I'll get right on it.
+Find a bug? Want more features? Find something missing in the documentation? Let me know! Please don't hesitate to [file an issue](https://github.com/maliceio/malice-alpine/issues/new) and I'll get right on it.
 
 ### License
 
