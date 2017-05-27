@@ -1,6 +1,6 @@
-FROM alpine:3.5
+FROM alpine:3.6
 
-MAINTAINER blacktop, https://github.com/blacktop
+LABEL maintainer "https://github.com/blacktop"
 
 RUN apk add --no-cache tini su-exec
 RUN set -x \
