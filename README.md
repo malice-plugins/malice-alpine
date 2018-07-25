@@ -6,7 +6,7 @@ Malice Plugin Alpine Docker Base Image
 
 ## Dependencies
 
-- [alpine:3.7](https://index.docker.io/_/alpine/)
+- [alpine:3.8](https://index.docker.io/_/alpine/)
 
 ## Documentation
 
@@ -23,4 +23,4 @@ Find a bug? Want more features? Find something missing in the documentation? Let
 
 ## License
 
-MIT Copyright (c) 2016-2017 **blacktop**
+MIT Copyright (c) 2016-2018 **blacktop**
