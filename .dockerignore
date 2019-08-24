@@ -3,9 +3,8 @@
 .gitignore
 
 .dockerignore
-README.md
-README.md.bu
-CHANGELOG.md
+*.md
+*.md.bu
 LICENSE
 VERSION
 Makefile
